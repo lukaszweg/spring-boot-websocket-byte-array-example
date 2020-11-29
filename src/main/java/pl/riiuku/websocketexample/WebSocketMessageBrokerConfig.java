@@ -13,6 +13,9 @@ import org.springframework.web.socket.server.standard.ServletServerContainerFact
 @Configuration
 public class WebSocketMessageBrokerConfig implements WebSocketMessageBrokerConfigurer {
 
+    /*
+    If You want to send byte array DO NOT USE SockJS. SockJS support only Text-based messages.
+     */
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/socket");
@@ -25,6 +28,9 @@ public class WebSocketMessageBrokerConfig implements WebSocketMessageBrokerConfi
         registry.setApplicationDestinationPrefixes("/app");
     }
 
+    /*
+    This bean allow to send bigger byte array via websocket
+     */
     @Bean
     public ServletServerContainerFactoryBean createWebSocketContainer() {
         ServletServerContainerFactoryBean container = new ServletServerContainerFactoryBean();
