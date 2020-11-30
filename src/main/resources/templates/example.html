@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+</body>
+<script>
+    var stompClient = Stomp.client("ws://localhost:8080/socket");
+    stompClient.connect({}, function (params) {
+        console.log(params)
+    })
+</script>
+</html>
