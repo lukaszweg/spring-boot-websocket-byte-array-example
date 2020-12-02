@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/MediaStreamRecorder.js"> </script>
 </head>
 <body>
+<video id="video" width="640" height="480" autoplay></video>
 </body>
-<script>
-    var stompClient = Stomp.client("ws://localhost:8080/socket");
-    stompClient.connect({}, function (params) {
-        console.log(params)
-    })
-</script>
+<script src="../static/client.js"></script>
 </html>
