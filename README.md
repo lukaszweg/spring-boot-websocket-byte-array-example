@@ -1,4 +1,4 @@
-#Web-Socket Spring Boot ByteArray Example
+# Web-Socket Spring Boot ByteArray Example
 
 This project is simple example of how create Spring boot web-socket server which get and send byte[]
 
